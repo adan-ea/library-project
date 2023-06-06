@@ -12,15 +12,7 @@ export class AppController {
     if (!book) {
       throw new NotFoundException(`Book with id ${bookId} not found`);
     }
-    console.log(book);
     return book;
-  }
-
-
-
-  @Get()
-  getAllBooks() {
-    return this.appService.findAll();
   }
 
   @Get()
