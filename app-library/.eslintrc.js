@@ -21,5 +21,12 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'capitalized-comments': 'error',
+    'eqeqeq': ['error', 'always'],
+    'no-constant-condition': 'off',
+    'no-duplicate-imports': 'error',
+    'no-undef': 0,
+    'no-unreachable-loop': 'error',
+    'sort-imports': 'error',
   },
 };

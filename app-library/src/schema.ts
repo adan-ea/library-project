@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, OneToOne, ManyToMany } from 'typeorm';
+import { Column, Entity, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Category {
@@ -35,7 +35,7 @@ export class Book {
   @Column({ nullable: true })
   creation_date: Date;
 
-  @Column({ type: 'decimal', precision: 5, scale: 1 })
+  @Column({ type: "decimal", precision: 5, scale: 1 })
   rating: number;
 
   @ManyToOne(() => Author)
@@ -56,7 +56,7 @@ export class Comment {
   @Column()
   likes: number;
 
-  @OneToMany(() => Book, (book) => book.comments)
+  @OneToMany(() => Book, book => book.comments)
   id_book: Book;
 }
 
