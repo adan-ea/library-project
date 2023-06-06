@@ -34,7 +34,7 @@ export class AppService {
     },
   ];
 
-  findAll(): Book[] {
+  async findAll(): Promise<Book[] | undefined> {
     return this.books;
   }
 

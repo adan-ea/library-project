@@ -1,7 +1,7 @@
 import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller('books')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
@@ -20,6 +20,11 @@ export class AppController {
 
   @Get()
   getAllBooks() {
+    return this.appService.findAll();
+  }
+
+  @Get()
+  async getAllBooks() {
     return this.appService.findAll();
   }
 }
